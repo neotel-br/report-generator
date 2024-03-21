@@ -1,0 +1,200 @@
+{
+"capa": {"aplicacao": "Monitora", "data_contrato": "37/2023", "data": "Agosto/2023"},
+"controle_de_versoes": [{
+  "data": "04/09/2023",
+  "versao": "1",
+  "autor": "Adilson Rocha",
+  "observacao": "Criacao do Documento"
+ },
+ {
+  "data": "05/09/2023",
+  "versao": "1.1",
+  "autor": "Adilson Rocha",
+  "observacao": "Revisao do Documento"
+ },
+ {
+  "data": "06/09/2023",
+  "versao": "1.2",
+  "autor": "Adilson Rocha",
+  "observacao": "Revisao do Documento"
+ },
+ {
+  "data": "07/09/2023",
+  "versao": "1.3",
+  "autor": "Adilson Rocha",
+  "observacao": "Revisao do Documento"
+ }
+],
+"aplicacao_alvo": {"aplicacao": "Monitora", "url": "https://monitora.com.br"},
+"metodologia": [{
+  "id": "1",
+  "passo": "Descoberta",
+  "descricao": "Realização de uma varredura de discovery, de natureza superficial, com o objetivo de catalogar arquivos, rotas e URLs que compõem a aplicação-alvo."
+ },
+ {
+  "id": "2",
+  "passo": "Varreduras",
+  "descricao": "Realização de varreduras automatizadas com ferramentas proprietárias para identificar e classificar possíveis vulnerabilidades."
+ },
+ {
+  "id": "3",
+  "passo": "Análise",
+  "descricao": "A partir das vulnerabilidades identificadas, realiza-se uma análise de seus resultados para identificar falsos-positivos e oportunidades de exploração."
+ },
+ {
+  "id": "3",
+  "passo": "Exploração",
+  "descricao": "Conjunto de atividades direcionadas para obter sucesso na exploração de uma vulnerabilidade. Isso inclui ganho de acesso privilegiado a sistemas, arquivos ou dados, sequestro de sessão de usuários, entre outros."
+ },
+ {
+  "id": "4",
+  "passo": "Coleta de Evidências",
+  "descricao": "Agrupamento de evidências, caso existam, que comprovem a exploração de vulnerabilidades."
+ },
+ {
+  "id": "5",
+  "passo": "Relatório",
+  "descricao": "Elaboração de um relatório final contendo detalhes das explorações bem-sucedidas, evidências, vulnerabilidades encontradas e um histórico das atividades."
+ }],
+"mapa_de_risco": [{
+  "risco": "Preencher",
+  "impacto_negocial": "Preencher",
+  "impacto_tecnologico": "Preencher"
+ }],
+"ferramental": [
+ {
+  "ferramenta": "Nexpose",
+  "versao": "Cloud",
+  "finalidade": "Varreduras profundas por vulnerabilidades e exploits."
+ },
+ {
+  "ferramenta": "Metasploit",
+  "versao": "Cloud",
+  "finalidade": "Framework de exploração de vulnerabilidades, fuzzing, brute force"
+ },
+ {
+  "ferramenta": "BurpSuite Professional",
+  "versao": "Cloud",
+  "finalidade": "Varreduras profundas por vulnerabilidades,  exploits, fuzzing, repeater, intruder."
+ },
+ {
+  "ferramenta": "NMap",
+  "versao": "7.93",
+  "finalidade": "Portscanning, services discovery, vulnerabilidades e fuzzing. "
+ },
+ {
+  "ferramenta": "SQLMap",
+  "versao": "Main GitHub",
+  "finalidade": "Varreduras, exploit e fuzzing de SQL-Injection em aplicações web. "
+ },
+ {
+  "ferramenta": "Beef",
+  "versao": "Main GitHub",
+  "finalidade": "Varreduras, exploit e fuzzing de XSS(Cross-sitescripting)"
+ },
+ {
+  "ferramenta": "Nexpose",
+  "versao": "Cloud",
+  "finalidade": "Varreduras profundas por vulnerabilidades e exploits."
+ },
+ {
+  "ferramenta": "Nexpose",
+  "versao": "Cloud",
+  "finalidade": "Varreduras profundas por vulnerabilidades e exploits."
+ }
+],
+"quadro_severidade": [{
+  "nome": "Monitora",
+  "criticas": "0",
+  "altas": "0",
+  "medias": "2",
+  "exploits": "0",
+  "ativ_90_dias": "0"
+ }
+],
+"resumo_vuln": [{
+  "id": "0",
+  "descricao": "Cross-site request forquery",
+  "risco": "Medio",
+  "cve_owasp": "A5",
+  "ocorrencias": "1"
+ }
+],
+"remediacoes": [
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 1",
+    "remediacoes_lista": [
+      "Preencher 1",
+      "Preencher 2"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 2",
+    "remediacoes_lista": [
+      "Preencher 3",
+      "Preencher 4"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 3",
+    "remediacoes_lista": [
+      "Preencher 5",
+      "Preencher 6"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 4",
+    "remediacoes_lista": [
+      "Preencher 7",
+      "Preencher 8"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 5",
+    "remediacoes_lista": [
+      "Preencher 9",
+      "Preencher 10"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 6",
+    "remediacoes_lista": [
+      "Preencher 11",
+      "Preencher 12"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 7",
+    "remediacoes_lista": [
+      "Preencher 13",
+      "Preencher 14"
+    ]
+  },
+  {
+    "remediacao_titulo": "Aplicação de Patches de Segurança 8",
+    "remediacoes_lista": [
+      "Preencher 15",
+      "Preencher 16"
+    ]
+  }
+],
+"historico_ativ": [{
+  "id": "1",
+  "data": "04/08/2023",
+  "atividade": "Reunião PMO - Aprovação do escopo",
+  "analista": "Adilson Rocha"
+ },
+ {
+  "id": "2",
+  "data": "04/08/2023",
+  "atividade": "Reunião PMO - Aprovação do escopo",
+  "analista": "Adilson Rocha"
+ }
+],
+"assinatura": {
+  "autor": "Adilson Rocha",
+  "cargo": "Analista de Segurança NEOTEL"
+}
+
+}
+

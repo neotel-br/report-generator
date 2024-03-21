@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <header>
+      <p>Teste</p>
+    </header>
+    <div class="controle">
+      <h2 class="title bold">CONTROLE DE VERSÕES</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Versão</th>
+            <th>Autor</th>
+            <th>Observação</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {% for dado in data.controle_de_versoes %}
+          <tr>
+            <th>{{ dado.data }}</th>
+            <th>{{ dado.versao }}</th>
+            <th>{{ dado.autor }}</th>
+            <th>{{ dado.observacao }}</th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="direitos-autorais">
+      <h2 class="title bold">1. DIREITOS AUTORAIS</h2> 
+     
+      <p class="text-tiny text-justify text-spacement">O conteúdo deste documento é confidencial, substituindo, na íntegra, todo e qualquer outro emitido anteriormente. A Neotel Segurança Digital não assume nenhuma responsabilidade pelo uso indevido desta  informação,  nem  qualquer  infração  de  patentes  ou  outros  direitos  de terceiros que possam resultar dessa ação.  Nenhuma licença será concedida por consequência sob qualquer  patente,  direito  autoral,  ou  outro  direito  de  propriedade  intelectual  exceto quando especificamente descrito. 
+      </p>
+      <p class="text-tiny text-justify text-spacement">As informações contidas neste documento estão sujeitas a modificações sem aviso prévio. Empresas, nomes e dados utilizados em exemplos são fictícios, a não ser que sejam especificados.  Nenhuma parte  deste  documento  poderá  ser  reproduzida  ou  transmitida  de qualquer  maneira,  seja  eletrônica  ou  mecânica,  para  qualquer  propósito,  sem  a  permissão expressamente escrita pela Neotel Segurança Digital.</p> 
+    </div>
+
+    <div class="seguranca-e-conf">
+      <h2 class="title bold">2. SEGURANÇA E CONFIDENCIALIDADE DE INFORMAÇÕES</h2> 
+     
+      <p class="text-tiny text-justify text-spacement">Todas as informações fornecidas à Neotel relacionadas a esse documento serão tratadas com o mais absoluto sigilo e a mais rigorosa confidencialidade, de modo a evitar, por qualquer meio ou forma, o conhecimento do seu conteúdo por parte de terceiros. A obrigação de sigilo permanecerá válida pelo período em que o relacionamento comercial entre o Cliente e a Neotel perdurar. 
+      </p>
+      <p class="text-tiny text-justify text-spacement">Excluem-se do compromisso de confidencialidade aqui previsto as informações: (a) disponíveis ao público de outra forma que não por divulgação feita por qualquer das Partes ou por qualquer de seus representantes legais; (b) que comprovadamente já eram do conhecimento de uma ou de todas as Partes ou de qualquer de seus representantes, antes da referida Parte ou de seus respectivos representantes terem acesso às Informações Confidenciais em  razão  do  presente  Contrato;  e  (c)  disponíveis  ao  público  por  meio  da  divulgação  de informações relevantes e essenciais do Cliente, nos termos da legislação aplicável.</p> 
+    </div>
+   
+     
+    <div class="uso-de-marcas">
+      <h2 class="title bold">3. USO DE MARCAS</h2> 
+      <p class="text-tiny text-justify text-spacement">Todas as marcas registradas, logotipos, imagens e ilustrações utilizadas nessa proposta são de propriedade da Neotel Segurança Digital e de seus respectivos proprietários no Brasil e fora dele, e assim sendo, não podem ser usadas para qualquer propósito, sem permissão expressa.</p> 
+    </div>
+    
+    <div class="objetivo">
+      <h2 class="title bold">4. OBJETIVO</h2> 
+      <p class="text-tiny text-justify text-spacement">Esse documento tem por objetivo apresentar resultados de teste de invasão (pentest), parte do serviço de Operação Assistida, item conforme item 8.5.12 do TR 01/2023.</p>   
+    </div>
+    
+    <div class="limitacoes-escopo">
+      <h2 class="title bold">5. LIMITAÇÕES DE ESCOPO DE RESPONSABILIDADE</h2> 
+      <p class="text-tiny text-justify text-spacement"><strong>6.</strong> Os resultados  apresentados  neste  relatório  representam  a  situação  encontrada  durante nossos levantamentos, no período compreendido de 05 de agosto a 20 de setembro, divididos em suas respectivas etapas, conforme detalhado em outros capítulos deste relatório e de acordo com os respectivos itens de escopo apresentados neste relatório, não considerando eventuais aspectos de controle ou fragilidades que eventualmente venham a ser manifestados após esse período.  
+      </p> 
+      <p class="text-tiny text-justify text-spacement">
+    Durante a execução  dos  trabalhos,  não  foram  realizados  testes de  desempenho,  de  alta performance ou stress testing para aferição de métricas do tempo de resposta das aplicações ou recursos computacionais utilizados.  
+      </p>
+      <p class="text-tiny text-justify text-spacement">
+    A NEOTEL  não  assegura  nem  assegurará  o  sucesso  da  implementação  do  resultado  dos serviços,  nem  assegura  ou  assegurará  que  tal  se  verifique  em  nenhum  prazo,  tampouco responderá  por  eventuais  oportunidades  que  deixem  de  ser  identificadas,  apresentadas  ou exploradas, independentemente dos motivos ou das razões para tais ocorrências.</p> 
+    </div>
+    
+    <div class="aplicacao-alvo">
+      <h2 class="title bold">6. APLICAÇÃO ALVO</h2>
+
+      <ul>
+        <li class="text-tiny">URL: {{ data.aplicacao_alvo.aplicacao }}</li>
+        <li class="text-tiny">{{ data.aplicacao_alvo.url }}</li>  
+      </ul>
+    </div>
+    
+    <div class="metodologia thead-border"> 
+      <h2 class="title bold">7. METODOLOGIA ADOTADA</h2> 
+     
+     
+      <p class="text-tiny text-justify text-spacement">A metodologia escolhida para o presente teste de invasão é a Blackbox, na qual o executor possui conhecimento mínimo sobre o Alvo, conduzindo as atividades em um ambiente externo, fora da rede do cliente.<br></p>
+      <p class="text-tiny text-justify text-spacement">A execução do pentest compreende os seguintes passos:  </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Passo</th>
+            <th>Observação</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {% for dado in data.metodologia %}
+          <tr>
+            <th>{{ dado.id }}</th>
+            <th>{{ dado.passo }}</th>
+            <th>{{ dado.descricao }}</th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table> 
+    </div>
+
+    <div class="mapa-de-impacto thead-border">
+      <h2 class="title bold">8. MAPA DE IMPACTO</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>RISCO</th>
+            <th>IMPACTO NEGOCIAL</th>
+            <th>IMPACTO TECNOLÓGICO</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {% for dado in data.mapa_de_risco %}
+          <tr>
+            <th>{{ dado.risco }}</th>
+            <th>{{ dado.impacto_negocial }}</th>
+            <th>{{ dado.impacto_tecnologico }}</th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table> 
+    </div>
+
+    <div class="ferramental-utilizado thead-border">
+      <h2 class="title bold">9. FERRAMENTAL UTILIZADO</h2>
+
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Ferramenta</th>
+            <th>Versão</th>
+            <th>Finalidade</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {% for dado in data.ferramental %}
+          <tr>
+            <th>{{ dado.ferramenta }}</th>
+            <th>{{ dado.versao }}</th>
+            <th>{{ dado.finalidade }}</th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table> 
+    </div>
+
+    <div class="resumo-resultados">
+      <h2 class="title bold">10. MAPA DE IMPACTO</h2>
+
+      <h3 class="title bold">10.1. QUADRO DE SEVERIDADE</h3>
+      <div class="quadro-severidade thead-border">
+        <table>
+          <thead>
+            <tr>
+              <th class="bg-blue text-white">Nome</th>
+              <th class="bg-black text-white">Critícas</th>
+              <th class="bg-red text-white">Altas</th> 
+              <th class="bg-yellow text-white">Medias</th> 
+              <th class="bg-darkblue text-white">Exploits</th> 
+              <th class="bg-darkblue text-white">Atividades 90 dias</th> 
+            </tr>
+          </thead>
+          <tbody>
+            {% for dado in data.quadro_severidade %}
+            <tr>
+              <th>{{ dado.nome }}</th>
+              <th>{{ dado.criticas }}</th>
+              <th>{{ dado.altas }}</th>
+              <th>{{ dado.medias }}</th>
+              <th>{{ dado.exploits }}</th>
+              <th>{{ dado.ativ_90_dias }}</th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="title bold">10.2. RESUMO DE VULNERABILIDADES</h3>
+      <div class="resumo-vuln thead-border">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>DESCRIÇÃO</th>
+              <th>RISCO</th> 
+              <th>CVE / OWASP</th> 
+              <th>OCORRÊNCIAS</th> 
+            </tr>
+          </thead>
+          <tbody>
+            {% for dado in data.resumo_vuln %}
+            <tr>
+              <th>{{ dado.id }}</th>
+              <th>{{ dado.descricao }}</th>
+              <th>{{ dado.risco }}</th>
+              <th>{{ dado.cve_owasp }}</th>
+              <th>{{ dado.ocorrencias }}</th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="title bold">10.3. DETALHAMENTO DAS VULNERABILIDADES ENCONTRADAS</h3>
+      <p class="text-tiny text-justify text-spacement">{{ data.detalhamento }}</p>
+      
+    </div>
+
+    <div class="remediacoes">
+      <h2 class="title bold">11. REMEDIAÇOES SUGERIDAS</h2>
+      <p class="text-tiny text-justify bold">Remediações gerais de segurança:</p>
+
+      {% for dado in data.remediacoes %}
+      <h2 class="text-tiny  bold">{{ loop.index }}. {{ dado.remediacao_titulo }}</h2> 
+        {% for remed in dado.remediacoes_lista %}
+          <p class="text-tiny text-justify"> - {{ remed }}</p>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    <div class="historico-ativ thead-border">
+      <h2 class="title bold">12. HISTÓRICO DE ATIVIDADES</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="text-center">ID</th>
+              <th class="text-center">DATA</th>
+              <th class="text-center">ATIVIDADE REALIZADA</th> 
+              <th class="text-center">ANALISTA</th> 
+            </tr>
+          </thead>
+          <tbody>
+            {% for dado in data.historico_ativ %}
+            <tr>
+              <th class="text-center">{{ dado.id }}</th>
+              <th class="text-center">{{ dado.data }}</th>
+              <th class="text-center">{{ dado.atividade }}</th>
+              <th class="text-center">{{ dado.analista }}</th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+    </div>
+
+    <div class="assinatura">
+      <div class="assinatura-linha"></div>
+      <p class="text-tiny text-center">{{ data.assinatura.autor }}</p>
+      <p class="text-tiny text-center">{{ data.assinatura.cargo }}</p>
+
+    </div>
+    
+    <div class="pagebreak"></div>
+    <div class="anexo">
+      <h2 class="title-big text-center bold">ANEXOS</h2>
+      <p class="title-big text-center bold">DETALHAMENTO DE VULNERABILIDADES</p>
+    </div>
+
+  </body>
+</html>

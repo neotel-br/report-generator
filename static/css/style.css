@@ -1,0 +1,55 @@
+
+@font-face {
+  font-family: Roboto;
+  src: url("Roboto-regular.ttf");
+}
+
+@page {
+    /* Header */
+    @top-center {
+      content: '';
+      display: block;
+      height: 0.5cm;  /* Adjust header height as needed */
+      opacity: 0.5;
+      width: 100%;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #93B44B;
+    } 
+
+    @top-left{
+      content: 'Relatório de Teste de Invasão';
+      display: block;
+      height: 0.5cm;  /* Adjust header height as needed */
+      color: grey;
+      width: 100%;
+      padding-bottom: 1rem;
+      margin-bottom: 0.2rem;
+      font-size: 12px;
+      font-family: Roboto;
+    }
+
+    @bottom-center {
+      content: '';
+      display: block;
+      height: 0.5cm;  /* Adjust header height as needed */
+      opacity: 0.5;
+      width: 100%;
+      margin-top: 1rem;
+      border-top: 2px solid #93B44B;
+    } 
+    /* Footer */
+    @bottom-right {
+      content: counter(page);
+      height: 1cm;  /* Adjust footer height as needed */
+      text-align: center;
+      width: 1cm;
+      font-size: 9px;
+      padding-top: 1rem;
+      font-family: Roboto;
+    }
+}
+
+body{
+  width: 100%;
+}
+

@@ -1,0 +1,193 @@
+@page {
+	size: A4 portrait;
+  margin: 6rem;
+}
+@font-face {
+  font-family: Roboto;
+  src: url("Roboto-regular.ttf");
+}
+body{
+  font-family: Roboto;
+}
+.pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+
+.title-big{
+  font-size: 24px;
+}
+
+.title{
+  font-size: 11px;
+  text-indent: 1rem;
+  margin-top: 1.5rem;
+}
+
+.img-center{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: end;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.text-tiny{
+  font-size: 11px;
+}
+
+.text-spacement{
+  text-indent: 1rem;
+  letter-spacing: -0.01rem;
+  word-spacing: 0.2rem;
+  line-height: 1rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  font-size: 11px;
+  border-collapse: collapse;
+}
+
+tbody th, td{
+  border: 1px solid black;
+}
+
+.text-white{
+  color: white;
+}
+
+.bg-yellow{
+  background-color: orange;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.bg-red{
+  background-color: red;
+}
+
+.bg-blue{
+  background-color: blue;
+}
+
+.bg-darkblue{
+  background-color: darkblue;
+}
+
+/* Cover page */
+.cover img{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+}
+
+.cover .date{
+  margin-top: 12rem;
+}
+
+
+/* Content page */
+th, td {
+  padding: 0.2rem;
+  text-align: left;
+}
+
+.controle thead tr th{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.controle thead th{
+  border-right:1px solid white;
+  border-top:1px solid white;
+  border-left:1px solid white;
+}
+
+.controle tbody tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+.metodologia thead tr th{
+  border: 1px solid black;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}
+
+.metodologia thead th, td {
+  padding: 0.2rem;
+  text-align: left;
+}
+
+.metodologia tbody th, td{
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.metodologia tbody th:not(:last-child) {
+  background-color: lightgreen;
+}
+
+
+.thead-border thead th{
+  border-right:1px solid black;
+  border-top:1px solid black;
+  border-left:1px solid black;
+}
+
+.mapa-de-impacto th, td{
+    padding-left: 0.5rem;
+}
+
+.mapa-de-impacto tbody th, td{
+  padding-bottom: 12rem;
+  text-align: left;
+}
+
+.quadro-severidade th, td{
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.resumo-vuln th, td{
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.resumo-vuln tbody th, td{
+  padding-bottom: 2rem;
+
+}
+
+.assinatura{
+  margin-top: 10rem;
+}
+
+.assinatura-linha{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1.2px solid black;
+}
+
+.anexo{
+  margin-top: 20rem;
+}
