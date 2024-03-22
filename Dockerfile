@@ -29,6 +29,8 @@ COPY . ./reports
 
 WORKDIR /reports
 
+RUN mkdir /reports/results && chmod -R 755 /reports/results/
+
 # Copy the rest of the application files into the container at /reports
 RUN mkdir -p /usr/share/fonts/truetype/
 RUN install -m644 ./static/fonts/Roboto-Regular.ttf /usr/share/fonts/truetype/
