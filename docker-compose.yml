@@ -3,4 +3,4 @@ services:
   report-generator:
     build: .
     volumes:
-      - /home/anscient/Documents/projects/reports/results:/reports/results:Z
+      - ./results:/reports/results:Z
