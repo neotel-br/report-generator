@@ -2,6 +2,7 @@
 
 ## Requirements
 - docker
+- docker-compose
 
 ## How to Run Project
 
