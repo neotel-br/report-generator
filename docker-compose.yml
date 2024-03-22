@@ -1,0 +1,6 @@
+version: '3'
+services:
+  report-generator:
+    build: .
+    volumes:
+      - /home/anscient/Documents/projects/reports/results:/reports/results:Z
