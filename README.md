@@ -9,9 +9,6 @@
 ### Edit json
 Modify `data.json` with the values of the report.
 
-### Create virtual environment(optional)
-    virtualenv venv
-
 ### Install requirements.txt
     pip install -r requirements.txt
 
