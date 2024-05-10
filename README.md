@@ -1,13 +1,17 @@
 # Report generator
 
 ## Requirements
+- python3
+- virtualenv(optional)
 - docker
-- docker-compose
 
 ## How to Run Project
 
 ### Edit json
 Modify `data.json` with the values of the report.
 
+### Install requirements.txt
+    pip install -r requirements.txt
+
 ### Run project
-    docker-compose up
+    python3 main.py
