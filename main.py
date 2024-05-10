@@ -1,6 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML, CSS
 import json
+import os
 import PyPDF2
 
 template_path = "templates"
@@ -31,6 +32,7 @@ def generate_pdf(template_path, data_file, templates):
     # print("Environment initialized.")
     with open(data_file, "r") as file:
         data = json.load(file)
+    create_folder_output("results/")
     for template in templates:
         template_name = template["template_name"]
         output_filename = template["output_file"]
@@ -58,6 +60,15 @@ def generate_pdf(template_path, data_file, templates):
     # print(template)
     # print(template_name)
     # print("Template rendered successfully.")
+
+
+def create_folder_output(folder_path):
+    if not os.path.exists(folder_path):
+        # Create the folder
+        os.makedirs(folder_path)
+        print("Created folder:", folder_path)
+    else:
+        print("Folder exists:", folder_path)
 
 
 def merge_pdf(templates, output_filename):
