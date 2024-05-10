@@ -5,18 +5,19 @@ import os
 import PyPDF2
 
 template_path = "templates"
+output_folder = "results/"
 # Modular templates
 templates = [
     {
         "template_name": "cover.html",
-        "output_file": "results/cover.pdf",
+        "output_file": output_folder + "cover.pdf",
         "style": True,
         "css_name": "static/css/cover.css",
         "data": True,
     },
     {
         "template_name": "content.html",
-        "output_file": "results/content.pdf",
+        "output_file": output_folder + "content.pdf",
         "style": True,
         "css_name": "static/css/style.css",
         "data": True,
@@ -32,7 +33,7 @@ def generate_pdf(template_path, data_file, templates):
     # print("Environment initialized.")
     with open(data_file, "r") as file:
         data = json.load(file)
-    create_folder_output("results/")
+    create_folder_output()
     for template in templates:
         template_name = template["template_name"]
         output_filename = template["output_file"]
@@ -62,7 +63,8 @@ def generate_pdf(template_path, data_file, templates):
     # print("Template rendered successfully.")
 
 
-def create_folder_output(folder_path):
+def create_folder_output():
+    folder_path = output_folder
     if not os.path.exists(folder_path):
         # Create the folder
         os.makedirs(folder_path)
