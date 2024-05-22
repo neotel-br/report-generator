@@ -2,8 +2,6 @@
 
 ## Requirements
 - python3
-- virtualenv(optional)
-- docker
 
 ## How to Run Project
 
